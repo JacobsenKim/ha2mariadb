@@ -1,5 +1,7 @@
 #!/bin/bash
 #
+# Domain: https://github.com/JacobsenKim/ha2mariadb
+#
 # sql_import_remote.sh
 #
 # Usage: ./sql_import_remote.sh <MYSQL_HOST>
