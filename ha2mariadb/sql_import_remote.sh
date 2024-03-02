@@ -1,6 +1,8 @@
 #!/bin/bash
 #
 # Domain: https://github.com/JacobsenKim/ha2mariadb
+# Wiki: https://github.com/JacobsenKim/ha2mariadb/wiki
+# Discussions: https://github.com/JacobsenKim/ha2mariadb/discussions
 #
 # sql_import_remote.sh
 #
