@@ -1,6 +1,6 @@
 # ha2mariadb
 
-Homeassistant Sqlite3 to mariaDB merger
+# Homeassistant Sqlite3 to mariaDB merger
 
 💡💡💡This need to wipe all data in mariaDB to work, so if you have run on mariaDB for some time and want to merge some old sqlight3 DB and at the same time keep the data you have in mariadb, this wont work.
 
