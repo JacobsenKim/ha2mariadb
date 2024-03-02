@@ -1,5 +1,7 @@
 #!/bin/bash
 #
+# Domain: https://github.com/JacobsenKim/ha2mariadb
+#
 # $ chmod +x grep_sql_data.sh
 #
 # Run the script like this:
