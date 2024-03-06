@@ -50,7 +50,6 @@ grep_and_split 'INSERT INTO states VALUES' states
 grep_and_split 'INSERT INTO event_types VALUES' event_types
 grep_and_split 'INSERT INTO states_meta VALUES' states_meta
 
-cp ./a0_grep_empty_all_data.sql ./output/a0_grep_empty_all_data.sql
+cp ./a0_homeassistant_custom_tables.sql ./output/a0_homeassistant_custom_tables.sql
 # cp ./z9_grep_mysql_importme_last.sql ./output/z9_grep_mysql_importme_last.sql
 echo "Finish.... $(date)"
-echo "Now run: ./sql_import_remote.sh your_db_IP"
