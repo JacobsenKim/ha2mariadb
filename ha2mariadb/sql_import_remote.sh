@@ -36,6 +36,7 @@ mkdir -p "$SQL_DIR_successful"
 
 # MYSQL_PASSWORD=Lasy_password_here
 # Prompt for the MySQL password without echoing the input
+echo -e "\a"
 echo -n "Enter password for User: $MYSQL_USER and DB: $MYSQL_DB Password: "
 read -s MYSQL_PASSWORD
 echo ""
@@ -91,6 +92,7 @@ echo "$(date) Import completed Host: $MYSQL_HOST DB: $MYSQL_DB"
 echo ""
 echo "Y the first time, n the second time one runs this script."
 echo ""
+echo -e "\a"
 read -p "Do you want the AUTO_INCREMENT numbers? (Y/n): " answer
 case ${answer:0:1} in
     y|Y )
@@ -136,3 +138,4 @@ echo "Now one can activate MariaDB in homeassistant configuration.yaml; the merg
         auto_increment="NO"
         ;;
 esac
+echo -e "\a"
