@@ -1,5 +1,5 @@
 #!/bin/bash
-# v.1.0.0
+#
 # Domain: https://github.com/JacobsenKim/ha2mariadb
 # Wiki: https://github.com/JacobsenKim/ha2mariadb/wiki
 # Discussions: https://github.com/JacobsenKim/ha2mariadb/discussions
@@ -7,6 +7,7 @@
 # sql_import_remote.sh
 #
 # Usage: ./sql_import_remote.sh <MYSQL_HOST>
+#
 # Provide MYSQL_HOST as a command line argument when running the script.
 #
 # MySQL connection parameters
@@ -28,13 +29,14 @@ DATE="$(date)"
 if [ -z "$1" ]; then
     echo "Usage: ./$0 192.168.X.X <---- your IP"
     echo "The user $MYSQL_USER and DB $MYSQL_DB is used in this script"
+    echo -e "\a"
     exit 1
 fi
 
 # Create target folder if it doesn't exist
 mkdir -p "$SQL_DIR_successful"
 
-# MYSQL_PASSWORD=Lasy_password_here
+#MYSQL_PASSWORD=lasy_password_her
 # Prompt for the MySQL password without echoing the input
 echo -e "\a"
 echo -n "Enter password for User: $MYSQL_USER and DB: $MYSQL_DB Password: "
@@ -127,15 +129,16 @@ case ${answer:0:1} in
         done
 
 echo "########## Next step: ##########"
-echo "Copy the file z9_grep_mysql_importme_last.sql to /home/USER_NAME/ha2mariadb/output and"
 echo "Edit the file z9_grep_mysql_importme_last.sql with the numbers above."
+echo "Copy the file to /home/USER_NAME/ha2mariadb/output and"
 echo "Run the ./sql_import_remote.sh <MYSQL_HOST> once more to finish the Import"
-echo "If you have edited and imported file z9_grep_mysql_importme_last.sql successfully,"
-echo "Now you can activate MariaDB in homeassistant configuration.yaml; the merge is completed."
+echo "If one has edited and imported the file z9_grep_mysql_importme_last.sql successfully,"
+echo "Now one can activate MariaDB in homeassistant configuration.yaml; the merge is completed."
 
         ;;
     * )
         auto_increment="NO"
         ;;
 esac
+
 echo -e "\a"
