@@ -44,8 +44,8 @@ read -s MYSQL_PASSWORD
 echo ""
 
 # Print the start time
-echo "$(date) Import started Host: $MYSQL_HOST DB: $MYSQL_DB" >> "$LOG_FILE"
-echo "$(date) Import started Host: $MYSQL_HOST DB: $MYSQL_DB"
+echo "$DATE Import started Host: $MYSQL_HOST DB: $MYSQL_DB" >> "$LOG_FILE"
+echo "$DATE Import started Host: $MYSQL_HOST DB: $MYSQL_DB"
 
 # Connect to MySQL and import SQL files
 for file in "$SQL_DIR"/*.sql; do
@@ -54,7 +54,7 @@ for file in "$SQL_DIR"/*.sql; do
 
     # Import SQL file
     echo "Importing $file ..."
-    echo "Importing $file at $(date)" >> "$LOG_FILE"
+    echo "Importing $file at $DATE" >> "$LOG_FILE"
 
     # Execute MySQL command securely
     output=$(mysql -u "$MYSQL_USER" -p"$MYSQL_PASSWORD" -h "$MYSQL_HOST" --default-character-set="$MYSQL_CHARSET" "$MYSQL_DB" --init-command="$Foreign_Key_Checks" < "$file" 2>&1)
@@ -64,8 +64,8 @@ for file in "$SQL_DIR"/*.sql; do
         error_message=$(echo "$output" | tail -n 1)  # Get the last line of the output as the error message
         echo "SQL: $error_message"
         echo "SQL: $error_message" >> "$LOG_FILE"
-        echo "WARNING: Importing $file at $(date)"
-        echo "WARNING: Importing $file at $(date)" >> "$LOG_FILE"
+        echo "WARNING: Importing $file at $DATE"
+        echo "WARNING: Importing $file at $DATE" >> "$LOG_FILE"
         
         # Check if Continue_On_Error is set to 0 (stop)
         if [ "$Continue_On_Error" -eq 0 ]; then
