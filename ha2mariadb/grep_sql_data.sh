@@ -9,7 +9,6 @@
 # Run the script like this:
 #
 # $ ./grep_sql_data.sh sqlite3_dbfile_.dump.sql
-# $ ./tools/grep_sql_data.sh ../sqlite3_dbfile_.dump.sql
 #
 ##########################################################
 
@@ -53,3 +52,4 @@ grep_and_split 'INSERT INTO states_meta VALUES' states_meta
 cp ./a0_homeassistant_custom_tables.sql ./output/a0_homeassistant_custom_tables.sql
 # cp ./z9_grep_mysql_importme_last.sql ./output/z9_grep_mysql_importme_last.sql
 echo "Finish.... $(date)"
+echo -e "\a"
