@@ -1,3 +1,7 @@
+-- # Domain: https://github.com/JacobsenKim/ha2mariadb
+-- # Wiki: https://github.com/JacobsenKim/ha2mariadb/wiki
+-- # Discussions: https://github.com/JacobsenKim/ha2mariadb/discussions
+
 -- phpMyAdmin SQL Dump
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
