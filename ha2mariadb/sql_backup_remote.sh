@@ -11,7 +11,7 @@
 #
 # Copy the script file to the ~/.backup directory
 #
-# $cp sql_backup_remote.sh ~/.backup/sql_backup_remote.sh
+# $ cp sql_backup_remote.sh ~/.backup/sql_backup_remote.sh
 #
 # You can schedule the script to run daily at 02:00 using cron. Add the following line to your crontab:
 #
@@ -33,14 +33,14 @@ MYSQL_USER="homeassistant" # <-------------- Edit this line.
 MYSQL_HOST="192.168.0.129" # <-------------- Edit this line.
 MYSQL_DB="homeassistant" # <-------------- Edit this line.
 MYSQL_CHARSET="utf8mb4" # <-------------- Edit this line.
-MYSQL_PASSWORD="password" # <-------------- Edit this line.
+MYSQL_PASSWORD="gMHjKDHtNH6UHEv" # <-------------- Edit this line.
 DATE="$(date +"%Y-%m-%d_%H-%M-%S")"
 
 # Directory containing the SQL backup files
 SQL_BACKUP_DIR="/media/20TB1/backup/rsync/homeassistant_sql" # change the path to where you want the backup file.
 
 # Log file
-LOG_FILE="$SQL_BACKUP_DIR/sql_backup_remote_$MYSQL_HOST.log"
+LOG_FILE="$SQL_BACKUP_DIR/$MYSQL_HOST-sql_backup_remote.log"
 
 # Function to log messages
 log_message() {
@@ -54,7 +54,7 @@ log_message() {
 # Backup function
 backup_database() {
     log_message "Starting backup process"
-    FILENAME="$MYSQL_DB-$DATE.sql"
+    FILENAME="$MYSQL_HOST-$MYSQL_DB-$DATE.sql"
     mysqldump -h "$MYSQL_HOST" -u "$MYSQL_USER" -p"$MYSQL_PASSWORD" --default-character-set="$MYSQL_CHARSET" "$MYSQL_DB" > "$SQL_BACKUP_DIR/$FILENAME"
     if [ $? -eq 0 ]; then
         log_message "Backup completed successfully"
