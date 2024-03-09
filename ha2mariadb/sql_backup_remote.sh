@@ -33,7 +33,7 @@ MYSQL_USER="homeassistant" # <-------------- Edit this line.
 MYSQL_HOST="192.168.0.129" # <-------------- Edit this line.
 MYSQL_DB="homeassistant" # <-------------- Edit this line.
 MYSQL_CHARSET="utf8mb4" # <-------------- Edit this line.
-MYSQL_PASSWORD="gMHjKDHtNH6UHEv" # <-------------- Edit this line.
+MYSQL_PASSWORD="password" # <-------------- Edit this line.
 DATE="$(date +"%Y-%m-%d_%H-%M-%S")"
 
 # Directory containing the SQL backup files
