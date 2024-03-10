@@ -8,8 +8,6 @@
 
 # 😮‍💨 [How2 look at Wiki](https://github.com/JacobsenKim/ha2mariadb/wiki).
 
-💡 If you have dublicated data, you have to fix it else this wont work.
-
 # 🏓 [Discussions](https://github.com/JacobsenKim/ha2mariadb/discussions).
 
 # 🕶️ Testet on Homeassistant
