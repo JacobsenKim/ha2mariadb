@@ -30,10 +30,10 @@
 
 # MySQL connection parameters
 MYSQL_USER="homeassistant" # <-------------- Edit this line.
-MYSQL_HOST="192.168.0.129" # <-------------- Edit this line.
+MYSQL_HOST="192.168.0.76" # <-------------- Edit this line.
 MYSQL_DB="homeassistant" # <-------------- Edit this line.
 MYSQL_CHARSET="utf8mb4" # <-------------- Edit this line.
-MYSQL_PASSWORD="password" # <-------------- Edit this line.
+MYSQL_PASSWORD="PASSWORD" # <-------------- Edit this line.
 DATE="$(date +"%Y-%m-%d_%H-%M-%S")"
 
 # Directory containing the SQL backup files
@@ -58,10 +58,14 @@ backup_database() {
     mysqldump -h "$MYSQL_HOST" -u "$MYSQL_USER" -p"$MYSQL_PASSWORD" --default-character-set="$MYSQL_CHARSET" "$MYSQL_DB" > "$SQL_BACKUP_DIR/$FILENAME"
     if [ $? -eq 0 ]; then
         log_message "Backup completed successfully"
+        gzip "$SQL_BACKUP_DIR/$FILENAME" # Zip the SQL file
+#        rm "$SQL_BACKUP_DIR/$FILENAME" # Remove the original SQL file
+        log_message "SQL file zipped and removed successfully"
     else
         log_message "Backup failed"
     fi
 }
+
 
 # Main script
 log_message "Backup script started"
