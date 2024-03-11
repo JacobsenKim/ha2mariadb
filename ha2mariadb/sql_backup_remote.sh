@@ -5,20 +5,6 @@
 # Discussions: https://github.com/JacobsenKim/ha2mariadb/discussions
 #
 ######################################################
-# Create the ~/.backup directory if it doesn't exist
-#
-# $ mkdir -p ~/.backup
-#
-# Copy the script file to the ~/.backup directory
-#
-# $ cp sql_backup_remote.sh ~/.backup/sql_backup_remote.sh
-#
-# You can schedule the script to run daily at 02:00 using cron. Add the following line to your crontab:
-#
-# $ crontab -e
-#
-# 0 2 * * * $HOME/.backup/sql_backup_remote.sh
-#
 # So the script can run
 #
 # $ chmod +x sql_backup_remote.sh
