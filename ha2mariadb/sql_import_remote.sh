@@ -129,11 +129,11 @@ case ${answer:0:1} in
         done
 
 echo "########## Next step: ##########"
-echo "Edit the file z9_grep_mysql_importme_last.sql with the numbers above."
+echo "Edit the file z9_grep_mysql_importme_last_43.sql with the numbers above."
 echo "Copy the file to /home/USER_NAME/ha2mariadb/output and"
 echo "Run the ./sql_import_remote.sh <MYSQL_HOST> once more to finish the Import"
-echo "If one has edited and imported the file z9_grep_mysql_importme_last.sql successfully,"
-echo "Now one can activate MariaDB in homeassistant configuration.yaml; the merge is completed."
+echo "If you have edited and imported the file z9_grep_mysql_importme_last_43.sql successfully,"
+echo "Now you can activate MariaDB in homeassistant configuration.yaml; the merge is completed."
 
         ;;
     * )
