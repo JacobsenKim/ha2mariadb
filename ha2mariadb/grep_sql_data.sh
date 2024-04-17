@@ -48,6 +48,7 @@ grep_and_split 'INSERT INTO statistics_short_term VALUES' statistics_short_term
 grep_and_split 'INSERT INTO states VALUES' states
 grep_and_split 'INSERT INTO event_types VALUES' event_types
 grep_and_split 'INSERT INTO states_meta VALUES' states_meta
+grep_and_split 'INSERT INTO migration_changes VALUES' migration_changes
 
 cp ./a0_homeassistant_schema_43_tables.sql ./output/a0_homeassistant_schema_43_tables.sql
 # cp ./z9_grep_mysql_importme_last.sql ./output/z9_grep_mysql_importme_last.sql
