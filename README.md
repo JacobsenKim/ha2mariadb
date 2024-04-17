@@ -2,6 +2,8 @@
 
 ☑️  ha2mariadb
 
+☑️   2024-04-17 - Update to work with the new schema version 43.
+
 # 💡This need to wipe all data in HA mariaDB to work💡
 
 💡 So if you have run homeassistant on mariaDB for some time and want to merge an old HA sqlight3 DB and at the same time keep the data you have in mariadb, this wont work.
@@ -12,4 +14,4 @@
 
 # 🕶️ Testet on Homeassistant
 
-![Skærmbillede fra 2024-03-03 00-08-53](https://github.com/JacobsenKim/ha2mariadb/assets/157890151/89c99e26-e6c9-4f0d-8cd1-cf0974c4f9e6)
+![Skærmbillede 2024-04-17 211236](https://github.com/JacobsenKim/ha2mariadb/assets/157890151/a194a19b-bbe8-47a7-ada4-0e96e088e49e)
