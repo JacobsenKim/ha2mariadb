@@ -1,5 +1,5 @@
 #!/bin/bash
-# v.1.0.1
+# v.1.0.2
 # Domain: https://github.com/JacobsenKim/ha2mariadb
 # Wiki: https://github.com/JacobsenKim/ha2mariadb/wiki
 # Discussions: https://github.com/JacobsenKim/ha2mariadb/discussions
@@ -19,7 +19,7 @@ Foreign_Key_Checks="SET foreign_key_checks = 1;" # 1 = on, 0 = off
 Continue_On_Error="0" # 1 = continue, 0 = stop
 
 # Directory containing SQL files
-SQL_DIR="$HOME/ha2mariadb/output"
+SQL_DIR="./output"
 SQL_DIR_successful="$SQL_DIR/successful"
 # Log file
 LOG_FILE="$SQL_DIR/0000_a_sql_import_remote.log"
