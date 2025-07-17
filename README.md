@@ -3,6 +3,7 @@
 ☑️  ha2mariadb
 
 ☑️   2025-07-17 - Update to work with the new schema for core 2025.7.2.
+
 ☑️   2024-04-17 - Update to work with the new schema version 43.
 
 # 💡The target mariaDB should be empty for the migration to work.
