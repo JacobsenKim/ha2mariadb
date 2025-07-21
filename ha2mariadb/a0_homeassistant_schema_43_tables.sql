@@ -1,7 +1,7 @@
 -- # Domain: https://github.com/JacobsenKim/ha2mariadb
 -- # Wiki: https://github.com/JacobsenKim/ha2mariadb/wiki
 -- # Discussions: https://github.com/JacobsenKim/ha2mariadb/discussions
--- Homeassistant schema_version = 43
+-- Homeassistant schema_version = 50
 --
 -- phpMyAdmin SQL Dump
 -- version 5.2.1

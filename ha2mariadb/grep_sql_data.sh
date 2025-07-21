@@ -1,5 +1,5 @@
 #!/bin/bash
-# v.1.0.1
+# v.1.0.2
 # Domain: https://github.com/JacobsenKim/ha2mariadb
 # Wiki: https://github.com/JacobsenKim/ha2mariadb/wiki
 # Discussions: https://github.com/JacobsenKim/ha2mariadb/discussions
@@ -13,7 +13,7 @@
 ##########################################################
 
 SOURCE_FILE="./$1"
-TARGET_FOLDER="$HOME/ha2mariadb/output"
+TARGET_FOLDER="./output"
 LOG_FILE="$TARGET_FOLDER/a0_grep_sql_data.log"
 
 # Create target folder if it doesn't exist
